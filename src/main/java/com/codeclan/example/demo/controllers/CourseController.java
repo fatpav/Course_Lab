@@ -20,15 +20,12 @@ public class CourseController {
 
     @GetMapping(value = "/courses")
     public ResponseEntity<List<Course>> getAllCourses(
-            @RequestParam(name = "rating", required = false) Integer rating) {
-        if (rating != null) {
-            return new ResponseEntity<>(courseRepository.findCourseByRating(rating), HttpStatus.OK);
+            @RequestParam(name = "starRating", required = false) Integer starRating){
+        if (starRating != null) {
+            return new ResponseEntity<>(courseRepository.findCourseByStarRating(starRating), HttpStatus.OK);
         }
-
 
         return new ResponseEntity<>(courseRepository.findAll(), HttpStatus.OK);
     }
-
-
 
 }

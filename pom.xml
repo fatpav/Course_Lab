@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.codeclan.example</groupId>
-	<artifactId>files_and_folders</artifactId>
+	<artifactId>files_folders</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>files_and_folders</name>
-	<description>Demo project for Spring Boot</description>
+	<name>files_folders</name>
+	<description>Homework on many to one and one to many</description>
 
 	<properties>
 		<java.version>11</java.version>

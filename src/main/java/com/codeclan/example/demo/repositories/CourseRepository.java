@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface CourseRepository extends JpaRepository<Course, Long> {
 //    Get all courses with a given rating
-    List<Course> findCourseByRating (int rating);
+    List<Course> findCourseByStarRating (int starRating);
 }
