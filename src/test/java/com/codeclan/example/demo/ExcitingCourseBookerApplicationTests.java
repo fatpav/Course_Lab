@@ -40,11 +40,11 @@ class ExcitingCourseBookerApplicationTests {
 		assertEquals(2, foundCustomer.size());
 	}
 
-//	@Test
-//	public void databaseHasBookings(){
-//		List<Booking> foundBooking = bookingRepository.findAll();
-//		assertEquals(5, foundBooking.size());
-//	}
+	@Test
+	public void databaseHasBookings(){
+		List<Booking> foundBooking = bookingRepository.findAll();
+		assertEquals(5, foundBooking.size());
+	}
 
 	@Test
 	public void databaseHasCourses(){

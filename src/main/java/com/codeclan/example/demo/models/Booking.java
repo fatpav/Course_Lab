@@ -3,6 +3,8 @@ package com.codeclan.example.demo.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "bookings")
@@ -25,8 +27,12 @@ public class Booking {
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
+
     public Booking(String date, Course course, Customer customer) {
+
         this.date = date;
+        this.course = course;
+        this.customer = customer;
     }
 
     public Booking() {

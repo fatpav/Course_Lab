@@ -27,23 +27,23 @@ public class Course {
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
-    @JsonIgnoreProperties({"courses"})
-    @ManyToMany
-    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-    @JoinTable(
-            name = "customers_courses",
-            joinColumns = {@JoinColumn(name = "course_id", nullable = false, updatable = false)},
-            inverseJoinColumns = {@JoinColumn(name = "customer_id", nullable = false, updatable = false)
-            }
-    )
-    private List<Customer> customers;
+//    @JsonIgnoreProperties({"courses"})
+//    @ManyToMany
+//    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+//    @JoinTable(
+//            name = "customers_courses",
+//            joinColumns = {@JoinColumn(name = "course_id", nullable = false, updatable = false)},
+//            inverseJoinColumns = {@JoinColumn(name = "customer_id", nullable = false, updatable = false)
+//            }
+//    )
+//    private List<Customer> customers;
 
 
     public Course(String courseName, String town, int starRating) {
         this.courseName = courseName;
         this.town = town;
         this.starRating = starRating;
-        this.customers = new ArrayList<Customer>();
+//        this.customers = new ArrayList<Customer>();
     }
 
     public String getCourseName() {
@@ -82,7 +82,7 @@ public class Course {
 
     }
 
-    public void addCustomer(Customer customer){
-        this.customers.add(customer);
-    }
+//    public void addCustomer(Customer customer){
+//        this.customers.add(customer);
+//    }
 }

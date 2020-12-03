@@ -51,15 +51,27 @@ public class DataLoader implements ApplicationRunner {
         Course telepath = new Course("Telepathy", "Stoke On Trent", 3);
         courseRepository.save(telepath);
 
-//        Booking booking1 = new Booking("23-03-2020", telepath, jed);
-//        bookingRepository.save(booking1);
-//        Booking booking2 = new Booking("15-01-2019", dance, fred);
-//        bookingRepository.save(booking2);
-//        Booking booking3 = new Booking("20-05-2019", cook, jed);
-//        bookingRepository.save(booking3);
-//        Booking booking4 = new Booking("01-06-2020", read, fred);
-//        bookingRepository.save(booking4);
-//        Booking booking5 = new Booking("09-02-2020", swim, jed);
-//        bookingRepository.save(booking5);
+        Booking booking1 = new Booking("23-03-2020", swim, jed);
+        bookingRepository.save(booking1);
+        Booking booking2 = new Booking("15-01-2019", dance, fred);
+        bookingRepository.save(booking2);
+        Booking booking3 = new Booking("20-05-2019", telepath, fred);
+        bookingRepository.save(booking3);
+        Booking booking4 = new Booking("01-06-2020", read, jed);
+        bookingRepository.save(booking4);
+        Booking booking5 = new Booking("09-02-2020", cook, jed);
+        bookingRepository.save(booking5);
+
+//        jed.addBooking(booking1);
+//        jed.addBooking(booking3);
+//        jed.addBooking(booking5);
+//        customerRepository.save(jed);
+//
+//        fred.addBooking(booking2);
+//        fred.addBooking(booking5);
+//        fred.addBooking(booking3);
+//        fred.addBooking(booking4);
+//        customerRepository.save(fred);
+
     }
 }

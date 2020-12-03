@@ -26,22 +26,22 @@ public class Customer {
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
-    @JsonIgnoreProperties({"customers"})
-    @ManyToMany
-    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-    @JoinTable(
-        name = "customers_courses",
-        joinColumns = {@JoinColumn(name = "customer_id", nullable = false, updatable = false)},
-        inverseJoinColumns = {@JoinColumn(name = "course_id", nullable = false, updatable = false)}
-        )
-        private List<Course> courses;
+//    @JsonIgnoreProperties({"customers"})
+//    @ManyToMany
+//    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+//    @JoinTable(
+//        name = "customers_courses",
+//        joinColumns = {@JoinColumn(name = "customer_id", nullable = false, updatable = false)},
+//        inverseJoinColumns = {@JoinColumn(name = "course_id", nullable = false, updatable = false)}
+//        )
+//        private List<Course> courses;
 
     public Customer(String name, String town, int age) {
         this.name = name;
         this.town = town;
         this.age = age;
         this.bookings = new ArrayList<Booking>();
-        this.courses = new ArrayList<Course>();
+//        this.courses = new ArrayList<Course>();
     }
 
     public Customer(){
