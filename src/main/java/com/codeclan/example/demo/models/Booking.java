@@ -29,6 +29,9 @@ public class Booking {
         this.date = date;
     }
 
+    public Booking() {
+    }
+
     public String getDate() {
         return date;
     }
@@ -45,8 +48,6 @@ public class Booking {
         this.id = id;
     }
 
-    public Booking() {
 
-    }
 
 }

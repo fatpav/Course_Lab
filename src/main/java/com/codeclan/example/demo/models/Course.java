@@ -81,4 +81,8 @@ public class Course {
     public Course(){
 
     }
+
+    public void addCustomer(Customer customer){
+        this.customers.add(customer);
+    }
 }

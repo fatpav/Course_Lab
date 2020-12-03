@@ -1,5 +1,7 @@
 package com.codeclan.example.demo;
 
+import com.codeclan.example.demo.models.Booking;
+import com.codeclan.example.demo.models.Course;
 import com.codeclan.example.demo.models.Customer;
 import com.codeclan.example.demo.repositories.BookingRepository;
 import com.codeclan.example.demo.repositories.CourseRepository;
@@ -36,6 +38,18 @@ class ExcitingCourseBookerApplicationTests {
 	public void databaseHasCustomers(){
 		List<Customer> foundCustomer = customerRepository.findAll();
 		assertEquals(2, foundCustomer.size());
+	}
+
+//	@Test
+//	public void databaseHasBookings(){
+//		List<Booking> foundBooking = bookingRepository.findAll();
+//		assertEquals(5, foundBooking.size());
+//	}
+
+	@Test
+	public void databaseHasCourses(){
+		List<Course> foundCourse = courseRepository.findAll();
+		assertEquals(5, foundCourse.size());
 	}
 
 }
