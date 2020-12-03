@@ -31,7 +31,7 @@ public class Customer {
     @JoinTable(
         name = "customers_courses",
         joinColumns = {@JoinColumn(name = "customer_id", nullable = false, updatable = false)},
-        inverseJoinColumns = {@JoinColumn(name = "course_id", nullable = false, updatable = false)},
+        inverseJoinColumns = {@JoinColumn(name = "course_id", nullable = false, updatable = false)}
         )
         private List<Course> courses;
 
