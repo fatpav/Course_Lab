@@ -43,6 +43,7 @@ public class Course {
         this.courseName = courseName;
         this.town = town;
         this.starRating = starRating;
+        this.bookings = new ArrayList<>();
 //        this.customers = new ArrayList<Customer>();
     }
 

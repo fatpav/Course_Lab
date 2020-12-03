@@ -10,4 +10,6 @@ import java.util.List;
 public interface BookingRepository extends JpaRepository<Booking, Long> {
 //    Get all customers for a given course
 //    List<Customer> findCustomerByCourse(Course course);
+
+    List<Booking> findBookingByDate(String date);
 }
