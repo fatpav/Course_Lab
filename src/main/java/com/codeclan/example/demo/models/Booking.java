@@ -10,7 +10,7 @@ public class Booking {
 
 
     @Column(name = "date")
-    private int date;
+    private String date;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,15 +25,15 @@ public class Booking {
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
-    public Booking(int date, Course course, Customer customer) {
+    public Booking(String date, Course course, Customer customer) {
         this.date = date;
     }
 
-    public int getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(int date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
