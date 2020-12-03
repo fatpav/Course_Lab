@@ -25,7 +25,7 @@ public class Booking {
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
-    public Booking(int date) {
+    public Booking(int date, Course course, Customer customer) {
         this.date = date;
     }
 

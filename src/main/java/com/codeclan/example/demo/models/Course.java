@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -42,6 +43,7 @@ public class Course {
         this.courseName = courseName;
         this.town = town;
         this.starRating = starRating;
+        this.customers = new ArrayList<Customer>();
     }
 
     public String getCourseName() {
